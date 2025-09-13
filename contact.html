@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>お問い合わせ | Tech Spoke</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <style>
+    /* お問い合わせページ専用追加 */
+    main.contact-form label {
+      font-weight: 600;
+      display: block;
+      margin-top: 15px;
+    }
+
+    main.contact-form input,
+    main.contact-form select,
+    main.contact-form textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    main.contact-form button {
+      margin-top: 25px;
+      background: linear-gradient(135deg, #0052cc, #0080ff);
+      color: #fff;
+      padding: 14px 35px;
+      border: none;
+      border-radius: 40px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    main.contact-form button:hover {
+      background: linear-gradient(135deg, #003d99, #0066cc);
+    }
+
+    main.contact-form .back-link {
+      margin-top: 20px;
+      text-align: right;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <a href="index.html"><img src="Tech Spoke.png" alt="Tech Spoke ロゴ"></a>
+  <nav>
+    <a href="#services">サービス</a>
+    <a href="#works">事例紹介</a>
+    <a href="company.html">会社紹介</a>
+    <a href="contact.html" class="active">お問い合わせ</a>
+  </nav>
+</header>
+
+<main class="contact-form">
+  <h1>お問い合わせ</h1>
+  <form action="#" method="post">
+    <label for="company">会社名</label>
+    <input type="text" id="company" name="company" placeholder="テクスポーク" />
+
+    <label for="department">所属部署</label>
+    <input type="text" id="department" name="department" placeholder="所属部署" />
+
+    <label for="position">役職</label>
+    <input type="text" id="position" name="position" placeholder="役職" />
+
+    <label for="name">お名前</label>
+    <input type="text" id="name" name="name" placeholder="山田太郎" required/>
+
+    <label for="phone">電話番号</label>
+    <input type="tel" id="phone" name="phone" placeholder="06-XXXX-XXXX" />
+
+    <label for="type">お問い合わせ種別</label>
+    <select id="type" name="type">
+      <option value="infrastructure">インフラ制作</option>
+      <option value="ec">ECサイト制作</option>
+      <option value="scratch">スクラッチ開発</option>
+      <option value="web">WEBサイト制作</option>
+      <option value="consulting">コンサルティング</option>
+      <option value="other">その他ご相談</option>
+    </select>
+
+    <label for="email">メールアドレス</label>
+    <input type="email" id="email" name="email" required/>
+
+    <label for="message">お問い合わせ内容</label>
+    <textarea id="message" name="message" rows="6" required></textarea>
+
+    <button type="submit">送信する</button>
+  </form>
+  <p class="back-link"><a href="index.html">← トップページへ戻る</a></p>
+</main>
+
+<footer>
+  <p>&copy; 2025 Tech Spoke</p>
+</footer>
+<button id="scrollTopBtn" title="トップへ戻る">↑</button>
+<script src="js/scrollTop.js"></script>
+</body>
+</html>
